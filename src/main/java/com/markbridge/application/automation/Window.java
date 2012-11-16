@@ -36,9 +36,12 @@ import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverBackedSelenium;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
@@ -67,13 +70,26 @@ public class Window {
                 List<WebElement> elementL = driver.findElements(by);
                 if(elementL != null && ! elementL.isEmpty()) {
                     element = elementL.get(0);
-                }
+            }
                 break;
             }
         } catch(Exception ex) {
         }
         return element;
     }
+    
+//    public WebElement elem(final By by) {
+//        //http://seleniumhq.org/docs/04_webdriver_advanced.html
+//        WebElement element = (new WebDriverWait(driver, 30L, 100L))
+//                .until(new ExpectedCondition<WebElement>() {
+//            @Override
+//            public WebElement apply(WebDriver input) {
+//                return driver.findElement(by);
+//            }
+//        });
+//        
+//        return element;
+//    }
     
     public WebElement className(String className) {
         return elem(By.className(className));
