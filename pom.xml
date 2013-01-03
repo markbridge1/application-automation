@@ -4,7 +4,7 @@
 
   <groupId>com.markbridge.application</groupId>
   <artifactId>application-automation</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>application-automation</name>
@@ -41,12 +41,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>2.26.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-server</artifactId>
-      <version>2.26.0</version>
+      <version>2.28.0</version>
     </dependency>
   </dependencies>
 </project>
