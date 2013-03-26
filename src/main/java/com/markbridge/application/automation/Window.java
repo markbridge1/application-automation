@@ -28,20 +28,13 @@
 package com.markbridge.application.automation;
 
 import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverBackedSelenium;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
  *
@@ -52,11 +45,11 @@ public class Window {
     public static DateFormat DATE_FORMAT = 
             DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.FULL, Locale.US);
     
-    private FirefoxDriver driver;
+    private RemoteWebDriver driver;
     private String baseUrl;
     private WebDriverBackedSelenium webdriver;
     
-    public Window(FirefoxDriver driver, String baseUrl) {
+    public Window(RemoteWebDriver driver, String baseUrl) {
         this.driver = driver;
         this.baseUrl = baseUrl;
         driver.get(baseUrl);
@@ -127,7 +120,7 @@ public class Window {
         return this.baseUrl;
     }
     
-    public FirefoxDriver getDriver() {
+    public RemoteWebDriver getDriver() {
         return driver;
     }
 }
